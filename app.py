@@ -39,7 +39,7 @@ def get_price(message: telebot.types.Message):
         bot.reply_to(message, f'Ошибка пользователя.\n{e}')
     except Exception as e:
         bot.reply_to(message, f'Не удалось обработать команду.\n{e}')
-    else:  # Делаем корректировку в связи с грамматикой русского языка :)
+    else:  # Делаем корректировку в связи с грамматикой русского языка :) Получилось громоздко, к сожалению, пока учусь дружить с pymorphy
         if quote == 'рубль' and base == 'доллар':
             text = f'Стоимость {amount} рублей в долларах - {total_base}'
         elif quote == 'доллар' and base == 'рубль':
